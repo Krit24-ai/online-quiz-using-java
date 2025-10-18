@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  color: #00f0ff;
+  background: radial-gradient(circle at 20% 30%, #011122, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.fade {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-container, .home-container, .result-container {
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 15px;
+  border: 2px solid #00ffff80;
+  box-shadow: 0 0 25px #00ffff55;
+  padding: 40px;
+  color: #e5faff;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px cyan;
+}
+
+.progress {
+  background: rgba(0, 255, 255, 0.2);
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.bar {
+  background: #00ffff;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid #00ffff80;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.option-card:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 15px #00ffff;
+  transform: translateY(-3px);
+}
+
+.option-card input {
+  margin-right: 10px;
+  accent-color: cyan;
+}
+
+.controls {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #00ccff;
+  transform: scale(1.1);
+}
+
+.home-btn {
+  background: #0088ff;
+}
+
+.submit-direct {
+  background: #00ff66;
+}
+
+.start {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.digital-bg {
+  background: radial-gradient(circle at 20% 30%, #001122, #000);
+}
+.result-container h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.result-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.result-container p {
+    font-size: 1.2rem;
+
+    margin-bottom: 20px;
+}
+.result-container .btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+.result-container .btn.home {
+    background: #0088ff;
+}
+.result-container .btn.home:hover {
+    background: #005fcc;
+}
